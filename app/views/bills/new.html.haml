@@ -6,7 +6,7 @@
       =f.label :tax
       =f.number_field :tax, :step => ".01"
       =f.label :tip_percent
-      =f.number_field :tip_percent, :step => ".01"
+      =f.select :tip_percent, options_for_select({"10%"=>10, "15%"=>15, "18%"=>18, "20%"=>20, "22%"=>22}, 20)
       / #calc
       /   %ul.small-block-grid-3
       /     -9.times do |x|

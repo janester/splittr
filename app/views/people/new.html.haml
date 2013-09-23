@@ -1,2 +1,5 @@
-%h1 People#new
-%p Find me in app/views/people/new.html.haml
+.row
+  .large-6.large-centered.columns
+    #person
+      = render partial:"form"
+    =button_to("Next","#", :class => "next-btn")

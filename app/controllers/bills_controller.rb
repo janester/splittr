@@ -5,5 +5,7 @@ class BillsController < ApplicationController
 
   def create
     @bill = Bill.create(params[:bill])
+    session[:bill_id] = @bill.id
+    redirect_to(new_person_path)
   end
 end
