@@ -1,5 +1,7 @@
 .row
   .large-6.large-centered.columns
+    .progress.radius
+      %span.meter{style:"width:50%"}
     #person
       = render partial:"form"
     =button_to("Next","#", :class => "next-btn")

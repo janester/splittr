@@ -1,5 +1,7 @@
 .row
   .large-6.large-centered.columns
+    .progress.radius
+      %span.meter{style:"width:25%"}
     = form_for @bill do |f|
       =f.label :total
       =f.number_field :total, :step => ".01"
