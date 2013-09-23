@@ -3,9 +3,13 @@ $dark-blue: #142132;
 $dark-green: #2a4344;
 $light-blue: #2cd0ff;
 
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  color:white;
+}
+
 html, body {
   background: $dark-green;
-  font-family: 'Lato', sans-serif;
   // background-position: fixed;
   color:white;
   min-height: 100%;
@@ -24,6 +28,11 @@ html, body {
   );
 }
 
+.meter {
+  text-align: right;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
 
 
 

@@ -1,5 +1,7 @@
 .row
   .large-12.columns
+    .progress.radius
+      %span.meter{style:"width:100%"} 100%
     %h1 Your Totals Per Person
     %ul.large-block-grid-2
       -@totals.each do |person|

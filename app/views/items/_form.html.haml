@@ -1,11 +1,11 @@
 
 %ul
--@bill.people.each do |person|
-  %li
-    = person.name
-    %ul
-      -person.items.each do |item|
-        %li= "#{item.name} - #{number_to_currency(item.price)}"
+  -@bill.people.each do |person|
+    %li
+      %p= person.name
+      %ul
+        -person.items.each do |item|
+          %li= "#{item.name} - #{number_to_currency(item.price)}"
 
 = form_for "item", :url => items_path, :remote => true do |f|
   =f.label :name

@@ -1,5 +1,7 @@
 .row
   .large-6.large-centered.columns
+    .progress.radius
+      %span.meter{style:"width:75%"} 75%
     #item
       = render partial:"form"
     =button_to("Next",bill_path(@bill), :method => "get", :class => "next-btn")
