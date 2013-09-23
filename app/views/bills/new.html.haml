@@ -1,0 +1,19 @@
+.row
+  .large-6.large-centered.columns
+    = form_for @bill do |f|
+      =f.label :total
+      =f.number_field :total, :step => ".01"
+      =f.label :tax
+      =f.number_field :tax, :step => ".01"
+      =f.label :tip_percent
+      =f.number_field :tip_percent, :step => ".01"
+      / #calc
+      /   %ul.small-block-grid-3
+      /     -9.times do |x|
+      /       %li
+      /         %div{id:x+1, class:"calc-btn "}= x+1
+      /     %li
+      /       %div{id:"point", class:"calc-btn"} .
+      /     %li
+      /       %div{id:"0", class:"calc-btn"} 0
+      =f.submit "Next", :class => "next-btn"

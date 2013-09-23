@@ -1,0 +1,83 @@
+$med-blue: #2769ac;
+$dark-blue: #142132;
+$dark-green: #2a4344;
+$light-blue: #2cd0ff;
+
+html, body {
+  background: $dark-green;
+  height: 100%;
+  background-image: linear-gradient(left top, $dark-blue 28%, $dark-green 70%);
+  background-image: -o-linear-gradient(left top, $dark-blue 28%, $dark-green 70%);
+  background-image: -moz-linear-gradient(left top, $dark-blue 28%, $dark-green 70%);
+  background-image: -webkit-linear-gradient(left top, $dark-blue 28%, $dark-green 70%);
+  background-image: -ms-linear-gradient(left top, $dark-blue 28%, $dark-green 70%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0.28, $dark-blue),
+    color-stop(0.7, $dark-green)
+  );
+}
+
+h1, label {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  // font-weight: 100;
+}
+
+label {
+  font-size: 16px;
+}
+
+.calc-btn {
+  // height: 5em;
+  width: 60%;
+  border-radius: 50%;
+  border: 2px solid $med-blue;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+  background: $dark-blue;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.next-btn {
+  width: 100%;
+  // border-radius: 50%;
+  border: 2px solid $med-blue;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  background: $dark-blue;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.calc-btn:active, .next-btn:active {
+  background:$med-blue;
+}
+
+
+#calc {
+  text-align: center;
+}
+
+#calc > div {
+  display: inline-block;
+  margin: 0 5%;
+}
+
+input[type='text'],input[type='number'],textarea, input[type='password']{
+  font-size:16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 31, 0, 1);
+    -webkit-box-shadow: 0 0 5px rgba(255, 31, 0, 1);
+    -moz-box-shadow: 0 0 5px rgba(255, 31, 0, 1);
+}

@@ -1,0 +1,5 @@
+= form_tag num_people_path, :remote => true do
+  = label_tag :num_people, "Select The Number of People:"
+  = select_tag :num_people, options_for_select((1..25).to_a)
+  = hidden_field_tag :bill_id, @bill.id
+  = submit_tag

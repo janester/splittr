@@ -1,0 +1,9 @@
+%h1 Splittr
+
+#form
+  = form_for @bill, :remote => true do |f|
+    =f.label :total
+    =f.text_field :total
+    =f.label :tax
+    =f.text_field :tax
+    =f.submit

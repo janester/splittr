@@ -2,11 +2,13 @@
 #
 # Table name: bills
 #
-#  id         :integer          not null, primary key
-#  total      :float
-#  tax        :float
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  total       :float
+#  tax         :float
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  tip         :float
+#  tip_percent :float
 #
 
 require 'spec_helper'
