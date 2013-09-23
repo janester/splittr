@@ -1,0 +1,18 @@
+
+%ul
+-@bill.people.each do |person|
+  %li
+    = person.name
+    %ul
+      -person.items.each do |item|
+        %li= "#{item.name} - #{number_to_currency(item.price)}"
+
+= form_for "item", :url => items_path, :remote => true do |f|
+  =f.label :name
+  =f.text_field :name, :autofocus => true
+  =f.label :price
+  =f.number_field :price, :step => ".01"
+  =select_tag "people[]", options_from_collection_for_select(@bill.people, "id", "name")
+  =link_to("Add Another Person", "#", id:"add-person-btn")
+  %br
+  =f.submit "Add", class:"add"

@@ -1,0 +1,27 @@
+.row
+  .large-12.columns
+    %h1 Your Totals Per Person
+    %ul.large-block-grid-2
+      -@totals.each do |person|
+        %li
+          %h2.subheader= person[:person].name
+          %ul
+            %li
+              %h3.subheader Items:
+              %ul
+                -person[:person].items.each do |item|
+                  %li
+                    %h4.subheader="#{item.name} - #{number_to_currency(item.price)}"
+            %li
+              %h3.subheader= "Total: #{number_to_currency(person[:person].total)}"
+            %li
+              %h3.subheader= "Percent of Total: #{number_to_percentage(person[:percent_of_tt])}"
+            %li
+              %h3.subheader= "Extra for Tip & Tax: #{number_to_currency(person[:extra])}"
+
+            %h2.subheader= "Subtotal: #{number_to_currency(person[:person].total+person[:extra])}"
+    %h1= "Total: #{number_to_currency(@bill.total)}"
+    %h1= "Tip & Tax: #{number_to_currency(@bill.tax+@bill.tip)}"
+    %h1= "Subtotal: #{number_to_currency(@bill.total+@bill.tax+@bill.tip)}"
+
+

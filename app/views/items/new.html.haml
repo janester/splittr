@@ -1,2 +1,5 @@
-%h1 Items#new
-%p Find me in app/views/items/new.html.haml
+.row
+  .large-6.large-centered.columns
+    #item
+      = render partial:"form"
+    =button_to("Next",bill_path(@bill), :method => "get", :class => "next-btn")

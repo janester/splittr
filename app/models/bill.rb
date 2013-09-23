@@ -14,4 +14,8 @@
 class Bill < ActiveRecord::Base
   attr_accessible :tax, :total, :tip_percent, :tip
   has_many :people
+
+  def items
+    self.people.map{|x| x.items}.flatten
+  end
 end

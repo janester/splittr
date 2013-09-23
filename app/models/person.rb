@@ -14,4 +14,9 @@ class Person < ActiveRecord::Base
   attr_accessible :name, :total, :bill_id
   belongs_to :bill
   has_many :items
+
+  def get_total
+    self.total = self.items.map(&:price).reduce(:+)
+    self.save
+  end
 end
